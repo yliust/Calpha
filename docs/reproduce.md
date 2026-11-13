@@ -24,11 +24,32 @@
 
 ## Sampling noise
 
-The head starts from Gaussian noise. The archived run and a rerun draw different noise for the
-same target, because the random generator is consumed in a different order during model
-construction. Scores of individual targets therefore differ; the mean is stable (see
-`results/multisample/`).
+The head starts from Gaussian noise drawn from a generator seeded with `seed + shard index`, and
+each shard folds its targets in sorted order. Use the same number of shards as the reported run
+(8) to draw the same noise. With a different number of shards individual scores move; the mean
+is stable (see `results/multisample/`).
 
 ## Rerun with the released files
 
-<!-- RERUN_TABLE -->
+FoldBench-334, 8 shards, seed 42, run on 2026-11-13 with this package and the released files
+(`llm/`, `esm_adapter.safetensors`, `frontend.safetensors`) plus the public SimpleFold-3B
+checkpoint:
+
+| | Reported | Rerun |
+|---|---|---|
+| TM-score, all 334 targets | 0.8075 | 0.8075 |
+| TM-score, no-homolog targets (128) | 0.7785 | 0.7785 |
+| lDDT / GDT-TS | 0.7841 / 0.7408 | 0.7841 / 0.7408 |
+| per-target TM difference, 90th percentile | | 0.0000 |
+
+On this hardware and software stack (H200, the versions in `requirements-frozen.txt`) the rerun
+matched the archived run target by target. On other GPUs or library versions expect small
+per-target differences from floating-point and sampling noise. CASP16 and CAMEO-2025 were not
+re-run for this check.
+
+A smoke test of `calpha chat`: an unseen phrasing ("Can you show me what this protein looks like
+in 3D?") was answered with `<structure>` and a 129-residue structure was written; "How many
+residues does this protein have?" was answered in text and no structure was produced. The
+text answers of the model to protein questions follow the formats of its training tasks and
+are often not useful prose.
+

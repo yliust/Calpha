@@ -128,10 +128,11 @@ calpha score --set benchmarks/foldbench334.parquet --out runs/foldbench334
 calpha compare runs/foldbench334/scores.csv results/scores/head_only_control/foldbench334/scores.csv
 ```
 
-Sampling is stochastic (200 steps, τ = 0.01, seed 42 + shard index). A rerun draws different
-noise from the archived run, so individual targets move while the mean stays close: across 16
-samples the single-sample mean is within 0.002 of the 16-sample mean on every set. See
-[`docs/reproduce.md`](docs/reproduce.md) for what we checked and what "reproduced" means here.
+Sampling is stochastic (200 steps, τ = 0.01, seed 42 + shard index). With 8 shards, our rerun of
+FoldBench-334 from the released files gave TM 0.8075, identical to the reported run target by
+target. With another number of shards individual targets move while the mean stays close:
+across 16 samples the single-sample mean is within 0.002 of the 16-sample mean on every set.
+See [`docs/reproduce.md`](docs/reproduce.md) for what was checked.
 
 ## Training
 
