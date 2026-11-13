@@ -1,0 +1,56 @@
+{
+ "model": "dplm2_650m",
+ "set": "foldbench334",
+ "model_id": "airkingbd/dplm2_650m (HF, pytorch_model.bin 2,693,742,215 bytes, last modified 2025-04-19) + structure tokenizer airkingbd/struct_tokenizer (dplm2_struct_tokenizer.ckpt)",
+ "code": "bytedance/dplm @ 8a2e15e (README protocol 'Forward Folding'), patched only for python 3.11 dataclass defaults and the missing openfold CUDA extension",
+ "package": "torch 2.8.0+cu128, transformers 4.41.2",
+ "params": 673388730,
+ "params_structure_tokenizer": 118109185,
+ "settings": {
+  "input": "sequence only; all structure tokens masked",
+  "task": "folding",
+  "max_iter": 100,
+  "unmasking_strategy": "deterministic",
+  "sampling_strategy": "argmax",
+  "temperature": "1.0 (unused under argmax)",
+  "autocast": "bfloat16 for the language model",
+  "batch_size": 1,
+  "samples_per_target": 1,
+  "note": "the official script batches up to 50 length-sorted targets with padding; we decode one target at a time because batched decoding with padding changes the argmax trajectory (only ~41% of targets identical; mean TM vs ground ground_truth 0.602 batched vs 0.613 single on 59 CAMEO-2022 targets)"
+ },
+ "seed": 0,
+ "deterministic": true,
+ "script": "python/eval/tr_dplm2.py --model dplm2_650m",
+ "hardware": "NVIDIA H200; GPUs were shared with other jobs for part of the run, so seconds_per_protein is inflated and not a clean speed measurement",
+ "training_data_cutoff": "no date cutoff stated in the README; per our reading of the DPLM-2 paper the training data are experimental PDB structures plus AFDB-SwissProt predicted structures (not re-verified here)",
+ "reproduction_gate": {
+  "test_set": "DPLM-2 CAMEO 2022 (Zenodo 15424801, 183 targets; 163 with 60<=L<=512 as in their evaluator)",
+  "paper": {
+   "rmsd_mean": 7.7,
+   "tm": 0.79
+  },
+  "this_run": {
+   "rmsd_mean_ca": 7.59,
+   "tm_align_mean": 0.709,
+   "tm_fixed_correspondence_mean": 0.694
+  },
+  "outcome": "RMSD reproduced (within 0.11 A); TM not reproduced (0.08 lower), cause not found"
+ },
+ "n_targets": 334,
+ "n_ok": 334,
+ "n_fail": 0,
+ "fail_reasons": {},
+ "seconds_per_protein_mean": 22.678,
+ "seconds_per_protein_median": 7.591,
+ "peak_gpu_mem_gb_max": 26.15,
+ "sanity": {
+  "tm_mean_ok_only": 0.6562,
+  "tm_mean_fail_as_0": 0.6562,
+  "tm_median": 0.7048,
+  "rmsd_median": 6.492,
+  "lddt_mean": 0.6136,
+  "ca_bond_ok_mean": 0.9693,
+  "scorer": "python/eval/metrics.py all_metrics on CA, residues with finite ref coords"
+ },
+ "date": "2026-11-11"
+}

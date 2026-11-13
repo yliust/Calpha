@@ -1,0 +1,17 @@
+{
+ "name": "cameo2025",
+ "n": 200,
+ "searched": 900,
+ "skipped": {
+  "fetch_fail": 0,
+  "len": 4,
+  "observed": 0,
+  "dup_seq": 171
+ },
+ "len_min": 58,
+ "len_max": 684,
+ "len_median": 292.5,
+ "release_min": "2025-01-01",
+ "release_max": "2025-02-19",
+ "note": "The CAMEO website was unavailable (HTTP 503) when the set was built. The targets were selected from RCSB directly with CAMEO-style criteria: single-chain X-ray structures released in 2025."
+}

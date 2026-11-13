@@ -1,0 +1,53 @@
+{
+ "method": "opendde_msa",
+ "set": "cameo2025",
+ "date": "2026-11-11",
+ "model": "OpenDDE opendde_v1 (opendde==1.2.0 from PyPI)",
+ "checkpoint": "<work>/models/ext/OpenDDE/opendde.pt (official weights, sha256 7b826620...07cc)",
+ "params": 655791538,
+ "training_data_cutoff": "2021-09-30 (docs/supported_models.md)",
+ "settings": {
+  "seed": 0,
+  "n_samples": 5,
+  "recycles": 10,
+  "diffusion_steps": 200,
+  "dtype": "bf16",
+  "use_msa": true,
+  "use_template": false,
+  "use_rna_msa": false,
+  "triangle_kernels": "auto",
+  "note": "all OpenDDE CLI defaults except the seed (no default) and use_msa"
+ },
+ "main_result": "top-ranked of 5 samples by OpenDDE ranking_score, seed 0",
+ "msa_source": "ColabFold MMseqs2 public API (api.colabfold.com), mode=env: UniRef30 + ColabFoldDB env, unpaired only, fetched 2026-11-11 with OpenDDE's own client; NO date filter on the sequence DBs",
+ "n_targets": 200,
+ "n_unique_sequences": 200,
+ "n_ok": 200,
+ "n_fail": 0,
+ "fail_reasons": {},
+ "failures": [],
+ "sec_per_protein": {
+  "mean": 37.29,
+  "median": 33.47,
+  "max": 97.34,
+  "total_gpu_sec": 7457.3,
+  "note": "model forward for 5 samples on one H200, GPU shared with another job; excludes featurization and model load"
+ },
+ "peak_gpu_mem_gb": 16.37,
+ "hardware": "NVIDIA H200 141 GB, 1 GPU per shard",
+ "quick_scores_rank0": {
+  "tm": 0.958,
+  "lddt_ca": 0.9476,
+  "rmsd": 1.7688,
+  "gdt_ts": 0.9301,
+  "tm_best_of_5": 0.9625,
+  "n": 200
+ },
+ "n_msa_rows_seen_by_model": {
+  "median": 7383.5,
+  "min": 50,
+  "n_targets_with_query_only_msa": 0
+ },
+ "software": "torch 2.10.0+cu128 (OpenDDE pins torch==2.7.1/cu126; see report), cuequivariance 0.10.0 triangle kernels",
+ "duplicate_sequences": "ids sharing a sequence get the same prediction (one run per unique sequence)"
+}

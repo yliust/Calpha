@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use Calpha, please cite the technical report."
+title: "Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model. Technical Report I: Protein Folding"
+authors:
+  - family-names: Liu
+    given-names: Yong
+year: 2026
+url: "https://calpha-ai.com"
+repository-code: "https://github.com/yliust/Calpha"
+license: Apache-2.0

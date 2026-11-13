@@ -1,0 +1,77 @@
+{
+ "overall": {
+  "n": 60,
+  "n_ok": 60,
+  "completion": 1.0,
+  "tm": 0.1411,
+  "lddt": 0.2071,
+  "gdt_ts": 0.1008,
+  "tm_ok_only": 0.1411,
+  "rmsd_median_ok": 23.119,
+  "tm>0.5": 0.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 4.471
+ },
+ "family": {
+  "n": 32,
+  "n_ok": 32,
+  "completion": 1.0,
+  "tm": 0.1434,
+  "lddt": 0.2064,
+  "gdt_ts": 0.0975,
+  "tm_ok_only": 0.1434,
+  "rmsd_median_ok": 23.386,
+  "tm>0.5": 0.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 4.461
+ },
+ "no_family": {
+  "n": 28,
+  "n_ok": 28,
+  "completion": 1.0,
+  "tm": 0.1385,
+  "lddt": 0.208,
+  "gdt_ts": 0.1045,
+  "tm_ok_only": 0.1385,
+  "rmsd_median_ok": 22.386,
+  "tm>0.5": 0.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 4.482
+ },
+ "len<100": {
+  "n": 8,
+  "n_ok": 8,
+  "completion": 1.0,
+  "tm": 0.1626,
+  "lddt": 0.3056,
+  "gdt_ts": 0.192,
+  "tm_ok_only": 0.1626,
+  "rmsd_median_ok": 15.752,
+  "tm>0.5": 0.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 3.962
+ },
+ "len100-300": {
+  "n": 52,
+  "n_ok": 52,
+  "completion": 1.0,
+  "tm": 0.1378,
+  "lddt": 0.192,
+  "gdt_ts": 0.0868,
+  "tm_ok_only": 0.1378,
+  "rmsd_median_ok": 23.747,
+  "tm>0.5": 0.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 4.549
+ },
+ "_meta": {
+  "set": "casp16",
+  "subset": "<work>/tr/llm_subset_casp16.txt",
+  "rule": "a failed target scores 0; a partial prediction is scaled by its coverage"
+ }
+}

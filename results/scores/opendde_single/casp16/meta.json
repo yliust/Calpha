@@ -1,0 +1,53 @@
+{
+ "method": "opendde_single",
+ "set": "casp16",
+ "date": "2026-11-11",
+ "model": "OpenDDE opendde_v1 (opendde==1.2.0 from PyPI)",
+ "checkpoint": "<work>/models/ext/OpenDDE/opendde.pt (official weights, sha256 7b826620...07cc)",
+ "params": 655791538,
+ "training_data_cutoff": "2021-09-30 (docs/supported_models.md)",
+ "settings": {
+  "seed": 0,
+  "n_samples": 5,
+  "recycles": 10,
+  "diffusion_steps": 200,
+  "dtype": "bf16",
+  "use_msa": false,
+  "use_template": false,
+  "use_rna_msa": false,
+  "triangle_kernels": "auto",
+  "note": "all OpenDDE CLI defaults except the seed (no default) and use_msa"
+ },
+ "main_result": "top-ranked of 5 samples by OpenDDE ranking_score, seed 0",
+ "msa_source": "none (single sequence)",
+ "n_targets": 155,
+ "n_unique_sequences": 72,
+ "n_ok": 155,
+ "n_fail": 0,
+ "fail_reasons": {},
+ "failures": [],
+ "sec_per_protein": {
+  "mean": 23.42,
+  "median": 15.25,
+  "max": 106.27,
+  "total_gpu_sec": 1686.3,
+  "note": "model forward for 5 samples on one H200, GPU shared with another job; excludes featurization and model load"
+ },
+ "peak_gpu_mem_gb": 18.4,
+ "hardware": "NVIDIA H200 141 GB, 1 GPU per shard",
+ "quick_scores_rank0": {
+  "tm": 0.3682,
+  "lddt_ca": 0.4285,
+  "rmsd": 17.1387,
+  "gdt_ts": 0.2989,
+  "tm_best_of_5": 0.4004,
+  "n": 155
+ },
+ "n_msa_rows_seen_by_model": {
+  "median": 1.0,
+  "min": 1,
+  "n_targets_with_query_only_msa": 155
+ },
+ "software": "torch 2.10.0+cu128 (OpenDDE pins torch==2.7.1/cu126; see report), cuequivariance 0.10.0 triangle kernels",
+ "duplicate_sequences": "ids sharing a sequence get the same prediction (one run per unique sequence)"
+}

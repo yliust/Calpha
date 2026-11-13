@@ -1,0 +1,36 @@
+{
+ "n_per_kind": 200,
+ "max_new": 16,
+ "rates": {
+  "train_tpl": {
+   "structure": 1.0,
+   "discrete": 0.0,
+   "other": 0.0
+  },
+  "unseen_en_a": {
+   "structure": 1.0,
+   "discrete": 0.0,
+   "other": 0.0
+  },
+  "unseen_en_b": {
+   "structure": 1.0,
+   "discrete": 0.0,
+   "other": 0.0
+  },
+  "multiturn": {
+   "structure": 1.0,
+   "discrete": 0.0,
+   "other": 0.0
+  },
+  "lm_ask": {
+   "structure": 0.9548387096774194,
+   "discrete": 0.0,
+   "other": 0.04516129032258064
+  },
+  "negative": {
+   "structure": 0.0,
+   "discrete": 0.0,
+   "other": 1.0
+  }
+ }
+}

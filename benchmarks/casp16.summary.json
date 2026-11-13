@@ -1,0 +1,14 @@
+{
+ "name": "casp16",
+ "n": 155,
+ "files_seen": 159,
+ "skipped": {
+  "parse_fail": 0,
+  "too_short": 0,
+  "too_long": 4
+ },
+ "len_min": 33,
+ "len_max": 756,
+ "len_median": 193.0,
+ "observed_frac_median": 1.0
+}

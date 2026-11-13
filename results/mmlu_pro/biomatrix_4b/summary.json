@@ -1,0 +1,9 @@
+{
+ "examples": 350,
+ "shards": 8,
+ "correct": 46,
+ "accuracy": 0.13142857142857142,
+ "invalid_rate": 0.2857142857142857,
+ "mean_output_tokens": 212.2342857142857,
+ "model": "<work>/models/ext/BioMatrix-4B-SFT"
+}

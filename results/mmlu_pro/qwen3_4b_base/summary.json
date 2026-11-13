@@ -1,0 +1,9 @@
+{
+ "examples": 350,
+ "shards": 8,
+ "correct": 41,
+ "accuracy": 0.11714285714285715,
+ "invalid_rate": 0.8028571428571428,
+ "mean_output_tokens": 1033.94,
+ "model": "<work>/models/ext/Qwen3-4B-Base"
+}

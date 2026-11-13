@@ -1,0 +1,98 @@
+{
+ "overall": {
+  "n": 334,
+  "rmsd_median": 2.762,
+  "tm": 0.8075,
+  "lddt": 0.7841,
+  "gdt_ts": 0.7408,
+  "tm>0.5": 0.8922,
+  "lddt>0.7": 0.7216,
+  "rmsd<2": 0.3862,
+  "contact_p@L/5": 0.8141
+ },
+ "family": {
+  "n": 206,
+  "rmsd_median": 2.701,
+  "tm": 0.8255,
+  "lddt": 0.7982,
+  "gdt_ts": 0.7533,
+  "tm>0.5": 0.9175,
+  "lddt>0.7": 0.767,
+  "rmsd<2": 0.4029,
+  "contact_p@L/5": 0.8324
+ },
+ "no_family": {
+  "n": 128,
+  "rmsd_median": 2.983,
+  "tm": 0.7785,
+  "lddt": 0.7614,
+  "gdt_ts": 0.7208,
+  "tm>0.5": 0.8516,
+  "lddt>0.7": 0.6484,
+  "rmsd<2": 0.3594,
+  "contact_p@L/5": 0.7848
+ },
+ "len<100": {
+  "n": 38,
+  "rmsd_median": 1.076,
+  "tm": 0.8208,
+  "lddt": 0.8489,
+  "gdt_ts": 0.8444,
+  "tm>0.5": 0.8684,
+  "lddt>0.7": 0.8421,
+  "rmsd<2": 0.6579,
+  "contact_p@L/5": 0.8579
+ },
+ "len100-300": {
+  "n": 188,
+  "rmsd_median": 2.45,
+  "tm": 0.8172,
+  "lddt": 0.7989,
+  "gdt_ts": 0.7692,
+  "tm>0.5": 0.8989,
+  "lddt>0.7": 0.7553,
+  "rmsd<2": 0.4309,
+  "contact_p@L/5": 0.83
+ },
+ "len300-600": {
+  "n": 96,
+  "rmsd_median": 4.071,
+  "tm": 0.8173,
+  "lddt": 0.7611,
+  "gdt_ts": 0.6922,
+  "tm>0.5": 0.9271,
+  "lddt>0.7": 0.6771,
+  "rmsd<2": 0.2396,
+  "contact_p@L/5": 0.8114
+ },
+ "len>600": {
+  "n": 12,
+  "rmsd_median": 18.238,
+  "tm": 0.5357,
+  "lddt": 0.5307,
+  "gdt_ts": 0.3567,
+  "tm>0.5": 0.5833,
+  "lddt>0.7": 0.1667,
+  "rmsd<2": 0.0,
+  "contact_p@L/5": 0.4489
+ },
+ "released_after_2020-05": {
+  "n": 334,
+  "rmsd_median": 2.762,
+  "tm": 0.8075,
+  "lddt": 0.7841,
+  "gdt_ts": 0.7408,
+  "tm>0.5": 0.8922,
+  "lddt>0.7": 0.7216,
+  "rmsd<2": 0.3862,
+  "contact_p@L/5": 0.8141
+ },
+ "_meta": {
+  "model": "simplefold_3B",
+  "num_steps": 200,
+  "tau": 0.01,
+  "nsample": 16,
+  "eval": "<work>/ctok/eval/foldbench334.parquet",
+  "note": "summary over sample 0; scores.csv has every sample"
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "n": 334,
+ "length_min": 28,
+ "length_median": 225.5,
+ "length_max": 1414,
+ "length_le_600": 322,
+ "observed_frac_median": 1.0,
+ "release_min": "2023-01-18",
+ "release_max": "2024-10-23"
+}

@@ -1,0 +1,21 @@
+Calpha
+Copyright 2026 Yong Liu
+
+This product is released under the Apache License, Version 2.0 (see LICENSE).
+
+It depends on the following third-party work, which is not redistributed here and is
+downloaded from its original source at install time or on first use:
+
+* Qwen3.5-9B (Alibaba Cloud), Apache License 2.0.
+  The released Calpha language-model weights are a fine-tuned derivative of Qwen3.5-9B.
+* SimpleFold (Apple Inc.), https://github.com/apple/ml-simplefold
+  Code: MIT License. Model weights: Apple Machine Learning Research Model License
+  (research use only). Calpha uses the SimpleFold-3B weights unchanged as its structure head and
+  SimpleFold's data pipeline (derived from Boltz, MIT License) for featurisation.
+  The conditioning front-end released with Calpha (esm_s_combine, esm_s_proj) was trained by us
+  against the frozen SimpleFold-3B head.
+* ESM2 (Meta Platforms, Inc.), https://github.com/facebookresearch/esm, MIT License.
+
+The benchmark sets under benchmarks/ are derived from the Protein Data Bank (CC0), from
+FoldBench target lists, and from CASP16 targets released by the Protein Structure Prediction
+Center.

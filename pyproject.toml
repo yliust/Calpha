@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "calpha"
+version = "0.1.0"
+description = "Calpha: protein folding through a general-purpose chat model"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Yong Liu", email = "liuyong9975@sjtu.edu.cn" }]
+dependencies = [
+  "torch>=2.8",
+  "transformers>=5.0",
+  "flash-linear-attention>=0.5.2",
+  "fair-esm==2.0.0",
+  "safetensors",
+  "huggingface_hub",
+  "lightning>=2.5",
+  "hydra-core",
+  "omegaconf",
+  "gemmi",
+  "numpy",
+  "pandas",
+  "pyarrow",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+
+[project.scripts]
+calpha = "calpha.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 110

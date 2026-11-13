@@ -1,0 +1,77 @@
+{
+ "overall": {
+  "n": 60,
+  "n_ok": 60,
+  "completion": 1.0,
+  "tm": 0.9337,
+  "lddt": 0.9301,
+  "gdt_ts": 0.9174,
+  "tm_ok_only": 0.9337,
+  "rmsd_median_ok": 1.444,
+  "tm>0.5": 1.0,
+  "ca_ca_ok": 0.9983,
+  "clash": 0.0,
+  "rg_norm": 2.785
+ },
+ "family": {
+  "n": 35,
+  "n_ok": 35,
+  "completion": 1.0,
+  "tm": 0.9473,
+  "lddt": 0.9419,
+  "gdt_ts": 0.9344,
+  "tm_ok_only": 0.9473,
+  "rmsd_median_ok": 1.295,
+  "tm>0.5": 1.0,
+  "ca_ca_ok": 0.9983,
+  "clash": 0.0,
+  "rg_norm": 2.751
+ },
+ "no_family": {
+  "n": 25,
+  "n_ok": 25,
+  "completion": 1.0,
+  "tm": 0.9147,
+  "lddt": 0.9135,
+  "gdt_ts": 0.8936,
+  "tm_ok_only": 0.9147,
+  "rmsd_median_ok": 1.466,
+  "tm>0.5": 1.0,
+  "ca_ca_ok": 0.9984,
+  "clash": 0.0,
+  "rg_norm": 2.832
+ },
+ "len<100": {
+  "n": 9,
+  "n_ok": 9,
+  "completion": 1.0,
+  "tm": 0.8732,
+  "lddt": 0.8978,
+  "gdt_ts": 0.8896,
+  "tm_ok_only": 0.8732,
+  "rmsd_median_ok": 1.303,
+  "tm>0.5": 1.0,
+  "ca_ca_ok": 1.0,
+  "clash": 0.0,
+  "rg_norm": 2.738
+ },
+ "len100-300": {
+  "n": 51,
+  "n_ok": 51,
+  "completion": 1.0,
+  "tm": 0.9444,
+  "lddt": 0.9358,
+  "gdt_ts": 0.9223,
+  "tm_ok_only": 0.9444,
+  "rmsd_median_ok": 1.466,
+  "tm>0.5": 1.0,
+  "ca_ca_ok": 0.9981,
+  "clash": 0.0,
+  "rg_norm": 2.793
+ },
+ "_meta": {
+  "set": "foldbench334",
+  "subset": "<work>/tr/llm_subset_foldbench334.txt",
+  "rule": "a failed target scores 0; a partial prediction is scaled by its coverage"
+ }
+}

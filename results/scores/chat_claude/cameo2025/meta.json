@@ -1,0 +1,10 @@
+{
+ "name": "chat_claude",
+ "provider": "openai",
+ "model": "claude-opus-5-5",
+ "extra": "",
+ "max_tokens": 32000,
+ "date": "2026-11-11",
+ "prompt": "You are given the amino-acid sequence of a single protein chain. Predict its three-dimensional structure.\n\nSequence ({L} residues):\n{seq}\n\nOutput your predicted structure as a PDB file that contains only the C-alpha atom of every residue, in order:\nexactly {L} ATOM records (atom name CA, chain A, residue numbers 1 to {L}, correct three-letter residue names,\ncoordinates in Angstroms with three decimals in standard PDB columns), followed by END.\nExample of one record:\nATOM      1  CA  MET A   1      12.345  -4.567   6.789  1.00  0.00           C\nDo not use any tools. Do not write code. Output only the PDB file, with no other text.",
+ "tools": "none"
+}

@@ -1,0 +1,45 @@
+{
+ "model": "esm3_open",
+ "set": "casp16",
+ "model_id": "EvolutionaryScale/esm3-sm-open-v1 (esm3_sm_open_v1.pth, HF snapshot 47f0545b)",
+ "package": "esm 3.2.1, torch 2.11.0+cu128",
+ "params": 1401735748,
+ "params_structure_decoder": 618552905,
+ "settings": {
+  "input": "sequence only; all structure tokens masked; other tracks padded",
+  "decoding": "iterative argmax, 20 steps, cosine unmasking schedule, most-confident-first (the archived 'conf' order of python/eval/baseline_esm3.py)",
+  "temperature": 0,
+  "autocast": "bfloat16",
+  "structure_decoder": "ESM3_structure_decoder_v0",
+  "samples_per_target": 1,
+  "max_len": "none (archived run excluded L>1024)"
+ },
+ "seed": 0,
+ "deterministic": true,
+ "script": "python/eval/tr_esm3.py",
+ "hardware": "NVIDIA H200, 3 shards",
+ "training_data_cutoff": "PDB structures up to 2020-05-01 per the ESM3 paper (Hayes et al. 2025), plus predicted structures (AFDB/ESMAtlas)",
+ "reproduction_gate": {
+  "reference": "reports/midtraining/baselines/esm3/conf (TM 0.7880, n=333)",
+  "this_run_same_333_targets": 0.7871,
+  "diff": -0.0009,
+  "pass": true
+ },
+ "n_targets": 155,
+ "n_ok": 155,
+ "n_fail": 0,
+ "fail_reasons": {},
+ "seconds_per_protein_mean": 0.992,
+ "seconds_per_protein_median": 1.066,
+ "peak_gpu_mem_gb_max": 7.5,
+ "sanity": {
+  "tm_mean_ok_only": 0.6428,
+  "tm_mean_fail_as_0": 0.6428,
+  "tm_median": 0.6965,
+  "rmsd_median": 7.384,
+  "lddt_mean": 0.6626,
+  "ca_bond_ok_mean": 0.7912,
+  "scorer": "python/eval/metrics.py all_metrics on CA, residues with finite ref coords"
+ },
+ "date": "2026-11-11"
+}
