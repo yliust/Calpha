@@ -6,7 +6,7 @@ Technical Report I: Protein Folding</p>
 
 <p align="center">
 <a href="https://calpha-ai.com">Homepage</a> ·
-<a href="assets/calpha_technical_report_1.pdf">Technical report</a> ·
+Technical report (coming soon) ·
 <a href="https://huggingface.co/liuyong9975/Calpha">Weights and data</a>
 </p>
 
