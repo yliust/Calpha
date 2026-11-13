@@ -20,8 +20,6 @@ language model. This repository holds the first step: a chat model that folds pr
 in plain language, the model answers with a `<structure>` token, and its hidden states drive a
 structure generator in the same forward pass, with no tool call.
 
-<p align="center"><img src="assets/architecture.png" width="820" alt="Calpha inference path"></p>
-
 A protein sequence enters Qwen3.5-9B inside an ordinary chat turn, together with per-residue
 features from frozen ESM2-3B. Hidden states from nine layers at the residue positions pass
 through a small conditioning front-end (8.4M parameters) into the frozen SimpleFold-3B
