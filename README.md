@@ -10,6 +10,11 @@ Technical report (coming soon) ·
 <a href="https://huggingface.co/liuyong9975/Calpha">Weights and data</a>
 </p>
 
+<p align="center">
+<a href="https://github.com/yliust/Calpha/blob/main/assets/calpha_promo.mp4"><img src="assets/promo_cover.jpg" width="720" alt="Watch the 30-second introduction to Calpha"></a><br>
+<sub>Click to watch the 30-second introduction (with sound).</sub>
+</p>
+
 Calpha is an open project to make the molecular world a native modality of a general-purpose
 language model. This repository holds the first step: a chat model that folds proteins. You ask
 in plain language, the model answers with a `<structure>` token, and its hidden states drive a
