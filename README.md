@@ -6,7 +6,7 @@ Technical Report I: Protein Folding</p>
 
 <p align="center">
 <a href="https://calpha-ai.com">Homepage</a> ·
-Technical report (coming soon) ·
+<a href="https://arxiv.org/abs/2611.20986">Technical report</a> ·
 <a href="https://huggingface.co/liuyong9975/Calpha">Weights and data</a>
 </p>
 
@@ -178,12 +178,15 @@ docs/                reproduction notes, model details
 ## Citation
 
 ```bibtex
-@techreport{liu2026calpha,
-  title  = {Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model.
-            Technical Report I: Protein Folding},
-  author = {Liu, Yong},
-  year   = {2026},
-  url    = {https://calpha-ai.com}
+@misc{liu2026calpha,
+  title         = {Calpha: Toward Native Biomolecular Intelligence in a General-Purpose Language Model},
+  author        = {Liu, Yong and Shi, Zhanpeng and Lin, Peicong and Zhong, Zhenyi and Dang, Yizhou and
+                   Wu, Wendi and Li, Haoling and Zheng, Shuangjia},
+  year          = {2026},
+  eprint        = {2611.20986},
+  archivePrefix = {arXiv},
+  primaryClass  = {q-bio.QM},
+  url           = {https://arxiv.org/abs/2611.20986}
 }
 ```
 
